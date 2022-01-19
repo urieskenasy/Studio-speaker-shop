@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+}
+
+  :root {
+      font-size: 62.5%;
+}
+
+body {
+      width: 100vw;
+      height: auto;
+      font-family: 'Work Sans', sans-serif;
+      background-color: #DDDDDD;
+}
+
+main {
+      width: 80%;
+      height: auto;
+      margin: 2rem auto;
+      font-family: 'Work Sans', sans-serif;
+      background-color: white;
+      padding: 2rem;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.1fr 0.8fr 2fr 0.3fr;
+      grid-template-areas: "nav nav nav"
+                           "main main main"
+                           "sec1 sec2 sec3"
+                           "footer footer footer"
+      ;
+      gap: 2rem;
+}
+
+/********** NAVBAR **********/
+
+nav {
+      grid-area: nav;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+/****** nav ul ******/
+
+nav ul {
+      display: flex;
+}
+
+nav ul li {
+     padding: 0 5rem;
+     font-size: 2.5rem;
+     color: blue;
+}
+
+/***** left side *****/
+
+.kindeOfLogo > p {
+      font-size: 2.5rem;
+      padding: 0 0.2rem;
+      display: inline;
+      text-transform:capitalize ;
+}
+
+.kindeOfLogo > i {
+      font-size: 2.5rem;
+      margin: 0 3rem 0 5rem;
+}
+
+/********** MAIN PART **********/
+
+.Main-sec {
+      grid-area: main;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+}
+
+.containerMain {
+      margin-top: 10rem;
+}
+
+.containerMain > h2 {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+}
+
+.containerMain > p {
+      font-size: 3rem;
+}
+
+.containerMainBTN {
+      width: 90%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.2rem;
+}
+
+.containerMainBTN > button {
+      background-color: black;
+      font-size: 2.2rem;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      word-spacing: 0.5rem;
+}
+
+.containerMainBTN > button > i {
+      font-size: 2rem;
+}
+
+/********** section's Part **********/
+
+section {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 10rem;
+}
+
+section > h3 {
+      font-size: 4rem;
+      word-spacing: 10rem;
+      color: white;
+      text-shadow: 0 0 2rem rgb(26, 26, 26);
+      padding: 10rem 10rem;
+      text-transform: capitalize;
+}
+
+.arrowRight {
+      padding: 6rem 10rem;
+}
+
+.arrowRight > i {
+      padding: 0.5rem;
+      font-size: 2rem;
+      color: black;
+      border: solid 0.7rem rgba(0, 0, 0, 0.089);
+      border-radius: 50%;
+      background-color: white;
+}
+
+.sec1 {
+      grid-area: sec1;
+      background-image: url(./images/white-box.jpg);
+}
+
+.sec2 {
+      background-position: left;
+      grid-area: sec2;
+      background-image: url(./images/room.jpg);
+}
+
+.sec3 {
+      grid-area: sec3;
+      background-image: url(./images/black-white.jpg);
+}
+
+/********** footer **********/
+
+footer {
+      grid-area: footer;
+      width: 100%;
+      height: 10rem;
+      text-align: center;
+      font-size: 2rem;
+      color: rgba(128, 128, 128, 0.493);
+      font-weight: bold;
+      line-height: 10rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+      :root {
+            font-size: 30%;
+      }
+      
+      main {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.1fr 0.8fr 2fr 2fr 2fr 0.3fr;
+            grid-template-areas: "nav"
+                                 "main"
+                                 "sec1"
+                                 "sec2"
+                                 "sec3"
+                                 "footer"
+            ;
+      }
+      
+}
